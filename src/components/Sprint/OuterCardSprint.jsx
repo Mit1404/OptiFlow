@@ -4,9 +4,11 @@ import InnerCardSprint from "./InnerCardSprint";
 const OuterCardSprint = () => {
   return (
     <>
-      <InnerCardSprint />
-      <InnerCardSprint />
-      <InnerCardSprint />
+      <div className="flex flex-col">
+        <InnerCardSprint />
+        <InnerCardSprint />
+        <InnerCardSprint />
+      </div>
     </>
   );
 };

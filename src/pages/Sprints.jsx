@@ -1,12 +1,16 @@
-import React from 'react'
-import OuterCardSprint from '../components/Sprint/OuterCardSprint'
+import React from "react";
+import OuterCardSprint from "../components/Sprint/OuterCardSprint";
 
 const Sprints = () => {
   return (
     <>
-        <OuterCardSprint/>
+      <div className="flex flex-row">
+        <OuterCardSprint />
+        <OuterCardSprint />
+        <OuterCardSprint />
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default Sprints
+export default Sprints;

@@ -25,6 +25,7 @@ import {
 import "./App.css";
 
 import { useStateContext } from "./contexts/ContextProvider";
+import Sprints from "./pages/Sprints";
 
 const App = () => {
   const {
@@ -85,6 +86,10 @@ const App = () => {
               {themeSettings && <ThemeSettings />}
 
               <Routes>
+
+                {/* Projects  */}
+                <Route path="/roadmap" element={<Calendar />} />
+                <Route path="/sprints" element={<Sprints />} />
                 {/* dashboard  */}
                 <Route path="/" element={<Ecommerce />} />
                 <Route path="/ecommerce" element={<Ecommerce />} />
@@ -97,7 +102,6 @@ const App = () => {
                 {/* apps  */}
                 <Route path="/kanban" element={<Kanban />} />
                 <Route path="/editor" element={<Editor />} />
-                <Route path="/roadmap" element={<Calendar />} />
                 <Route path="/color-picker" element={<ColorPicker />} />
 
                 {/* charts  */}
