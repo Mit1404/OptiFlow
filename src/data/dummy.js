@@ -961,7 +961,6 @@ export const employeesGrid = [
   },
 ];
 
-
 export const cartData = [
   {
     image: product5,

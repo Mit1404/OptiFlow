@@ -20,8 +20,11 @@ import {
   Stacked,
 } from "./pages";
 import { useStateContext } from "./contexts/ContextProvider";
-import Springform from "./components/Sprint Form/Springform";
+// import Springform from "./components/Sprint Form/Springform";
 import Customer from "./components/Customer/Customer";
+// import Springform from "./components/Sprint_Form/Sprint_form";
+import Dashboard from "./pages/Dashboard/Dashboard";
+import Springform from "./components/Sprint_Form/Sprint_form";
 
 const App = () => {
   const {
@@ -83,12 +86,12 @@ const App = () => {
 
               <Routes>
                 {/* SprintForm  */}
-                <Route path="/form" element={<Springform />} />
+                <Route path="/sprintform" element={<Springform />} />
                 {/* dashboard  */}
                 {/* Projects  */}
                 <Route path="/roadmap" element={<Calendar />} />
                 {/* dashboard  */}
-
+                <Route path="/dashboard" element={<Dashboard />} />
                 {/* pages  */}
                 <Route path="/employees" element={<Employees />} />
 
@@ -107,6 +110,7 @@ const App = () => {
                 <Route path="/color-mapping" element={<ColorMapping />} />
                 <Route path="/pyramid" element={<Pyramid />} />
                 <Route path="/stacked" element={<Stacked />} />
+                <Route path="/sprintform" element={<Springform />} />
               </Routes>
             </div>
             <Footer />
