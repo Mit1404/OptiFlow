@@ -531,14 +531,17 @@ export const links = [
       {
         name: "Sprints",
         icon: <FaRunning />,
+        url: "sprints",
       },
       {
         name: "Roadmap",
         icon: <RiRoadMapLine />,
+        url: "roadmap",
       },
       {
         name: "Analytics",
         icon: <DiGoogleAnalytics />,
+        url: "analytics"
       },
     ],
   },

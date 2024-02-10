@@ -93,11 +93,11 @@ const App = () => {
                 <Route path="/orders" element={<Orders />} />
                 <Route path="/employees" element={<Employees />} />
                 <Route path="/customers" element={<Customers />} />
-
+              
                 {/* apps  */}
                 <Route path="/kanban" element={<Kanban />} />
                 <Route path="/editor" element={<Editor />} />
-                <Route path="/Roadmap" element={<Calendar />} />
+                <Route path="/roadmap" element={<Calendar />} />
                 <Route path="/color-picker" element={<ColorPicker />} />
 
                 {/* charts  */}
