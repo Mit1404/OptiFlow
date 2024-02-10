@@ -21,6 +21,7 @@ import {
 } from "./pages";
 
 import { useStateContext } from "./contexts/ContextProvider";
+import Customer from "./components/Customer/Customer";
 
 const App = () => {
   const {
@@ -94,6 +95,8 @@ const App = () => {
 
                 {/* charts  */}
                 <Route path="/line" element={<Line />} />
+                <Route path="/feedback" element={<Customer />} />
+
                 <Route path="/area" element={<Area />} />
                 <Route path="/bar" element={<Bar />} />
                 <Route path="/pie" element={<Pie />} />
