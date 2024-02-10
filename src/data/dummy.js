@@ -70,18 +70,18 @@ export const gridOrderStatus = (props) => (
 );
 
 export const kanbanGrid = [
-  { headerText: "To Do", keyField: "Open", allowToggle: true },
+  { headerText: "Development", keyField: "Open", allowToggle: true },
 
-  { headerText: "In Progress", keyField: "InProgress", allowToggle: true },
+  { headerText: "Testing", keyField: "InProgress", allowToggle: true },
 
   {
-    headerText: "Testing",
+    headerText: "Deployment",
     keyField: "Testing",
     allowToggle: true,
-    isExpanded: false,
+    // isExpanded: false,
   },
 
-  { headerText: "Done", keyField: "Close", allowToggle: true },
+  { headerText: "Completed", keyField: "Close", allowToggle: true },
 ];
 const gridEmployeeProfile = (props) => (
   <div className="flex items-center gap-2">
@@ -541,7 +541,7 @@ export const links = [
       {
         name: "Analytics",
         icon: <DiGoogleAnalytics />,
-        url: "analytics"
+        url: "analytics",
       },
     ],
   },
