@@ -1,8 +1,11 @@
 import React from 'react'
+import OuterCardSprint from '../components/Sprint/OuterCardSprint'
 
 const Sprints = () => {
   return (
-    <div>Sprints</div>
+    <>
+        <OuterCardSprint/>
+    </>
   )
 }
 
