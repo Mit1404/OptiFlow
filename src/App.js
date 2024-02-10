@@ -20,10 +20,11 @@ import {
   Stacked,
 } from "./pages";
 import { useStateContext } from "./contexts/ContextProvider";
-import Springform from "./components/Sprint Form/Springform";
+// import Springform from "./components/Sprint Form/Springform";
 import Customer from "./components/Customer/Customer";
-import Springform from "./components/Sprint_Form/Sprint_form";
+// import Springform from "./components/Sprint_Form/Sprint_form";
 import Dashboard from "./pages/Dashboard/Dashboard";
+import Springform from "./components/Sprint_Form/Sprint_form";
 
 const App = () => {
   const {

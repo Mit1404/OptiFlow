@@ -1,89 +1,27 @@
+/* Dashboard.css */
 .dashboard {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
+    justify-content: space-around;
+    /* align-items: center; */
+    height: 100vh;
 }
 
-.dashboard h1 {
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 30px;
-}
-
-.dashboard-stats {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 600px;
-    margin-bottom: 20px;
-}
-
-.dashboard-stat {
+.card {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 10px;
-    min-width: 150px;
 }
 
-.dashboard-stat h2 {
-    margin: 0;
-    font-weight: bold;
-}
-
-.dashboard-stat p {
-    margin: 0;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.dashboard-filters {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    max-width: 600px;
-}
-
-.dashboard-filters h2 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.dashboard-filters ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.dashboard-filters li {
-    display: flex;
-    align-items: center;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    padding: 5px 10px;
-    background-color: #ddd;
-    border-radius: 5px;
-}
-
-.dashboard-filters span {
-    margin-left: 5px;
-}
-
-.dashboard-filters span:first-child {
+.card-title {
     font-size: 14px;
-    font-weight: bold;
 }
 
-.dashboard-filters span:last-child {
-    font-size: 14px;
-    font-weight: normal;
+.number {
+    font-size: 24px;
 }
