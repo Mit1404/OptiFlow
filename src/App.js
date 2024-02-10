@@ -19,8 +19,8 @@ import {
   Sprint,
   Stacked,
 } from "./pages";
-
 import { useStateContext } from "./contexts/ContextProvider";
+import Springform from "./components/Sprint Form/Springform";
 import Customer from "./components/Customer/Customer";
 
 const App = () => {
@@ -82,6 +82,9 @@ const App = () => {
               {themeSettings && <ThemeSettings />}
 
               <Routes>
+                {/* SprintForm  */}
+                <Route path="/form" element={<Springform />} />
+                {/* dashboard  */}
                 {/* Projects  */}
                 <Route path="/roadmap" element={<Calendar />} />
                 {/* dashboard  */}
