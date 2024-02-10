@@ -13,10 +13,10 @@ import {
   ColorPicker,
   Employees,
   Financial,
-  Kanban,
   Line,
   Pie,
   Pyramid,
+  Sprint,
   Stacked,
 } from "./pages";
 
@@ -89,7 +89,7 @@ const App = () => {
                 <Route path="/employees" element={<Employees />} />
 
                 {/* apps  */}
-                <Route path="/kanban" element={<Kanban />} />
+                <Route path="/sprints" element={<Sprint />} />
                 <Route path="/color-picker" element={<ColorPicker />} />
 
                 {/* charts  */}
