@@ -1,30 +1,25 @@
-import React, { useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { FiSettings } from "react-icons/fi";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
+import React, { useEffect } from "react";
+import { FiSettings } from "react-icons/fi";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import { Navbar, Footer, Sidebar, ThemeSettings } from "./components";
+import "./App.css";
+import { Footer, Navbar, Sidebar, ThemeSettings } from "./components";
 import {
-  Ecommerce,
-  Orders,
-  Calendar,
-  Employees,
-  Stacked,
-  Pyramid,
-  Customers,
-  Kanban,
-  Line,
   Area,
   Bar,
-  Pie,
-  Financial,
-  ColorPicker,
+  Calendar,
   ColorMapping,
-  Editor,
+  ColorPicker,
+  Employees,
+  Financial,
+  Line,
+  Pie,
+  Pyramid,
+  Sprint,
+  Stacked,
 } from "./pages";
-import "./App.css";
 import { useStateContext } from "./contexts/ContextProvider";
-import Sprints from "./pages/Sprints";
 import Springform from "./components/Sprint Form/Springform";
 
 const App = () => {
@@ -88,23 +83,16 @@ const App = () => {
               <Routes>
                 {/* SprintForm  */}
                 <Route path="/form" element={<Springform />} />
-
                 {/* dashboard  */}
                 {/* Projects  */}
                 <Route path="/roadmap" element={<Calendar />} />
-                <Route path="/sprints" element={<Sprints />} />
                 {/* dashboard  */}
-                <Route path="/" element={<Ecommerce />} />
-                <Route path="/ecommerce" element={<Ecommerce />} />
 
                 {/* pages  */}
-                <Route path="/orders" element={<Orders />} />
                 <Route path="/employees" element={<Employees />} />
-                <Route path="/customers" element={<Customers />} />
 
                 {/* apps  */}
-                <Route path="/kanban" element={<Kanban />} />
-                <Route path="/editor" element={<Editor />} />
+                <Route path="/sprints" element={<Sprint />} />
                 <Route path="/color-picker" element={<ColorPicker />} />
 
                 {/* charts  */}
