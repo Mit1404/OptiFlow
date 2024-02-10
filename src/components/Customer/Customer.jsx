@@ -1,6 +1,53 @@
-// FeedbackForm.js
 import React, { useState } from "react";
-import "./Customer.css";
+import styled from "styled-components";
+
+// Styled Components
+const FeedbackFormContainer = styled.div`
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+`;
+
+const FormGroup = styled.div`
+  margin-bottom: 15px;
+`;
+
+const Label = styled.label`
+  display: block;
+  font-weight: bold;
+`;
+
+const Input = styled.input`
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+`;
+
+const TextArea = styled.textarea`
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+`;
+
+const SubmitButton = styled.button`
+  display: block;
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: ${(props) => (props.isHovered ? "#0056b3" : "#000")};
+`;
+
+const CenteredTitle = styled.h2`
+  text-align: center;
+`;
 
 function Customer() {
   const [formData, setFormData] = useState({
@@ -33,12 +80,12 @@ function Customer() {
   };
 
   return (
-    <div className="feedback-form">
-      <h2 style={{textAlign: 'center'}}>Customer Feedback Form</h2>
+    <FeedbackFormContainer>
+      <CenteredTitle>Customer Feedback Form</CenteredTitle>
       <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="name">Name:</label>
-          <input
+        <FormGroup>
+          <Label htmlFor="name">Name:</Label>
+          <Input
             type="text"
             id="name"
             name="name"
@@ -46,10 +93,10 @@ function Customer() {
             onChange={handleChange}
             required
           />
-        </div>
-        <div className="form-group">
-          <label htmlFor="email">Email:</label>
-          <input
+        </FormGroup>
+        <FormGroup>
+          <Label htmlFor="email">Email:</Label>
+          <Input
             type="email"
             id="email"
             name="email"
@@ -57,10 +104,10 @@ function Customer() {
             onChange={handleChange}
             required
           />
-        </div>
-        <div className="form-group">
-          <label htmlFor="productName">Product Name:</label>
-          <input
+        </FormGroup>
+        <FormGroup>
+          <Label htmlFor="productName">Product Name:</Label>
+          <Input
             type="text"
             id="productName"
             name="productName"
@@ -68,30 +115,27 @@ function Customer() {
             onChange={handleChange}
             required
           />
-        </div>
-        <div className="form-group">
-          <label htmlFor="description">Description:</label>
-          <textarea
+        </FormGroup>
+        <FormGroup>
+          <Label htmlFor="description">Description:</Label>
+          <TextArea
             id="description"
             name="description"
             value={formData.description}
             onChange={handleChange}
             required
           />
-        </div>
-        <button
+        </FormGroup>
+        <SubmitButton
           type="submit"
-          style={{
-            backgroundColor: isHovered ? "#0056b3" : "#000",
-            color: "#fff",
-          }}
+          isHovered={isHovered}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
           Submit Feedback
-        </button>
+        </SubmitButton>
       </form>
-    </div>
+    </FeedbackFormContainer>
   );
 }
 
