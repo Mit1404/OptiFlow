@@ -2,7 +2,9 @@ import React from 'react'
 
 const Sprints = () => {
   return (
-    <div>Sprints</div>
+    <div>
+        
+    </div>
   )
 }
 
