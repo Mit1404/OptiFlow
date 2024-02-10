@@ -521,6 +521,7 @@ export const links = [
       {
         name: "Dashboard",
         icon: <MdOutlineDashboardCustomize />,
+        url: "dashboard",
       },
     ],
   },

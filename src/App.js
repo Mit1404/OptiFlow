@@ -21,6 +21,8 @@ import {
 } from "./pages";
 
 import { useStateContext } from "./contexts/ContextProvider";
+import Springform from "./components/Sprint_Form/Sprint_form";
+import Dashboard from "./pages/Dashboard/Dashboard";
 
 const App = () => {
   const {
@@ -84,7 +86,7 @@ const App = () => {
                 {/* Projects  */}
                 <Route path="/roadmap" element={<Calendar />} />
                 {/* dashboard  */}
-
+                <Route path="/dashboard" element={<Dashboard />} />
                 {/* pages  */}
                 <Route path="/employees" element={<Employees />} />
 
@@ -101,6 +103,7 @@ const App = () => {
                 <Route path="/color-mapping" element={<ColorMapping />} />
                 <Route path="/pyramid" element={<Pyramid />} />
                 <Route path="/stacked" element={<Stacked />} />
+                <Route path="/sprintform" element={<Springform />} />
               </Routes>
             </div>
             <Footer />
