@@ -1,6 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Sprint_form.css";
 import Header from "../Header";
+import { doc, setDoc } from "firebase/firestore";
+import { db } from "../../firebase.config";
+import { getKanbanData } from "../../data/dummy";
 
 const Springform = () => {
   // Use the useState hook to create state variables for the form inputs
@@ -10,7 +13,23 @@ const Springform = () => {
   const [taskStatus, setTaskStatus] = useState("");
   const [taskDeadline, setTaskDeadline] = useState(new Date());
   const [color, setColor] = useState("red");
-  const submit = () => {
+
+  const addTask = async() => {
+    const x=await setDoc(doc(db, "kanban",String (Math.floor(Math.random() * 100))), {
+      Title: taskTitle,
+      Summary: taskSummary,
+      Status: taskStatus,
+      Priority: priority,
+      Deadline: taskDeadline,
+      Color: color,
+    });
+    console.log(x);
+  };
+
+  // This function will be called when the form is submitted
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    // Do something with the form data here
     if (
       taskTitle === "" ||
       taskSummary === "" ||
@@ -18,23 +37,20 @@ const Springform = () => {
       priority === ""
     ) {
       alert("Please fill all the fields");
+      return; // Return early if form is not valid
     }
     if (priority === "High") {
       setColor("red");
-    }
-    if (priority === "Medium") {
+    } else if (priority === "Medium") {
       setColor("blue");
-    }
-    if (priority === "Low") {
+    } else if (priority === "Low") {
       setColor("green");
     }
+    await addTask(); // Call addTask function
   };
-  // This function will be called when the form is submitted
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Do something with the form data here
-    console.log({ taskTitle, task, deadline, priority });
-  };
+  useEffect(() => {
+    getKanbanData();
+  },[])
   return (
     <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-3xl">
       <Header category="Project-name" title="Sprint" />
@@ -96,6 +112,7 @@ const Springform = () => {
           <option value="Medium">Medium</option>
           <option value="Low">Low</option>
         </select>
+        {/* Other input fields */}
         <button className="button_form" type="submit">
           Submit
         </button>
