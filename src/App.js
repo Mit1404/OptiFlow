@@ -86,7 +86,7 @@ const App = () => {
 
               <Routes>
                 {/* SprintForm  */}
-                <Route path="/form" element={<Springform />} />
+                <Route path="/sprintform" element={<Springform />} />
                 {/* dashboard  */}
                 {/* Projects  */}
                 <Route path="/roadmap" element={<Calendar />} />
