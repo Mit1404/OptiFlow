@@ -1,34 +1,42 @@
-import React from 'react';
-import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, DateTime, SplineAreaSeries, Legend } from '@syncfusion/ej2-react-charts';
+// AreaResponsiveContainer.jsx
+import React from "react";
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
 
-import { ChartsHeader } from '../../components';
-import { areaCustomSeries, areaPrimaryXAxis, areaPrimaryYAxis } from '../../data/dummy';
-import { useStateContext } from '../../contexts/ContextProvider';
+const AreaResponsiveContainer = () => {
+  const data = [
+    { name: 'Jan', value: 400 },
+    { name: 'Feb', value: 300 },
+    { name: 'Mar', value: 200 },
+    { name: 'Apr', value: 278 },
+    { name: 'May', value: 189 },
+    { name: 'Jun', value: 239 },
+    { name: 'Jul', value: 349 },
+  ];
 
-const Area = () => {
-  const { currentMode } = useStateContext();
+  // Define gradient stops for the blur effect
+  const gradientStops = [
+    { offset: "0%", stopColor: "rgba(0, 0, 0, 0)" },
+    { offset: "100%", stopColor: "rgba(0, 0, 0, 0.8)" },
+  ];
 
   return (
-    <div className="m-4 md:m-10 mt-24 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl">
-      <ChartsHeader category="Area" title="Inflation Rate in percentage" />
-      <div className="w-full">
-        <ChartComponent
-          id="charts"
-          primaryXAxis={areaPrimaryXAxis}
-          primaryYAxis={areaPrimaryYAxis}
-          chartArea={{ border: { width: 0 } }}
-          background={currentMode === 'Dark' ? '#33373E' : '#fff'}
-          legendSettings={{ background: 'white' }}
-        >
-          <Inject services={[SplineAreaSeries, DateTime, Legend]} />
-          <SeriesCollectionDirective>
-            {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-            {areaCustomSeries.map((item, index) => <SeriesDirective key={index} {...item} />)}
-          </SeriesCollectionDirective>
-        </ChartComponent>
-      </div>
-    </div>
+    <ResponsiveContainer width="100%" height={300}>
+      <AreaChart data={data} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
+        <defs>
+          <linearGradient id="area-gradient" x1="0" y1="0" x2="0" y2="1">
+            {gradientStops.map((stop, index) => (
+              <stop key={index} offset={stop.offset} stopColor={stop.stopColor} />
+            ))}
+          </linearGradient>
+        </defs>
+        <CartesianGrid strokeDasharray="3 3" />
+        <XAxis dataKey="name" />
+        <YAxis />
+        <Tooltip />
+        <Area type="monotone" dataKey="value" stroke="#000000" fill="url(#area-gradient)" />
+      </AreaChart>
+    </ResponsiveContainer>
   );
 };
 
-export default Area;
+export default AreaResponsiveContainer;
