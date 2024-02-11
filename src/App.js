@@ -27,6 +27,7 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import Springform from "./components/Sprint_Form/Sprint_form";
 import LoginPage from "./pages/LoginPage";
 import FeedbackCard from "./components/FeedbackCard";
+import Analytics from "./pages/Analytics/Analytics";
 
 const App = () => {
   const {
@@ -108,6 +109,9 @@ const App = () => {
                 <Route path="/feedback" element={<Customer />} />
                 <Route path="/customerfeedback" element={<FeedbackCard />} />
                 {/* <Route path="/area" element={<Area />} />
+                <Route path="/analytics" element={<Analytics />} />
+
+                <Route path="/area" element={<Area />} />
                 <Route path="/bar" element={<Bar />} />
                 <Route path="/pie" element={<Pie />} />
                 <Route path="/financial" element={<Financial />} />
