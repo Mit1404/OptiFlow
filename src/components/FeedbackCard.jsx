@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { MdOutlineFeedback } from "react-icons/md";
 const FeedbackCard = () => {
   return (
     <>
@@ -8,17 +7,16 @@ const FeedbackCard = () => {
         <CardContent>
           <h3>Feedback</h3>
           <p>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac
-            felis vitae tortor pharetra condimentum. Quisque ultricies purus nec
-            mi facilisis, eget fermentum arcu ultricies."
+            The PLM system greatly improved our team's collaboration and
+            streamlined our product development process.
           </p>
         </CardContent>
         <UserInfo>
           <p>
-            <strong>Name:</strong> John Doe
+            <strong>Name:</strong> Jeet Shah
           </p>
           <p>
-            <strong>Email:</strong> johndoe@example.com
+            <strong>Email:</strong> shahjeet64@gmail.com
           </p>
         </UserInfo>
       </Card>
@@ -26,17 +24,16 @@ const FeedbackCard = () => {
         <CardContent>
           <h3>Feedback</h3>
           <p>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac
-            felis vitae tortor pharetra condimentum. Quisque ultricies purus nec
-            mi facilisis, eget fermentum arcu ultricies."
+            Using the PLM system has significantly reduced our time-to-market
+            and increased our product quality.
           </p>
         </CardContent>
         <UserInfo>
           <p>
-            <strong>Name:</strong> John Doe
+            <strong>Name:</strong> Akash Manna
           </p>
           <p>
-            <strong>Email:</strong> johndoe@example.com
+            <strong>Email:</strong> akashmanna318@gmail.com
           </p>
         </UserInfo>
       </Card>
@@ -44,17 +41,17 @@ const FeedbackCard = () => {
         <CardContent>
           <h3>Feedback</h3>
           <p>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac
-            felis vitae tortor pharetra condimentum. Quisque ultricies purus nec
-            mi facilisis, eget fermentum arcu ultricies."
+            The PLM system's customizable workflows and comprehensive data
+            management capabilities have revolutionized our product lifecycle
+            management.
           </p>
         </CardContent>
         <UserInfo>
           <p>
-            <strong>Name:</strong> John Doe
+            <strong>Name:</strong> Dhruvin Dholakia
           </p>
           <p>
-            <strong>Email:</strong> johndoe@example.com
+            <strong>Email:</strong> dd2242003@gmail.com
           </p>
         </UserInfo>
       </Card>
@@ -62,35 +59,16 @@ const FeedbackCard = () => {
         <CardContent>
           <h3>Feedback</h3>
           <p>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac
-            felis vitae tortor pharetra condimentum. Quisque ultricies purus nec
-            mi facilisis, eget fermentum arcu ultricies."
+            We love how the PLM system integrates seamlessly with our suppliers,
+            enhancing communication and efficiency across the supply chain.
           </p>
         </CardContent>
         <UserInfo>
           <p>
-            <strong>Name:</strong> John Doe
+            <strong>Name:</strong> Rupesh Raut
           </p>
           <p>
-            <strong>Email:</strong> johndoe@example.com
-          </p>
-        </UserInfo>
-      </Card>
-      <Card>
-        <CardContent>
-          <h3>Feedback</h3>
-          <p>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac
-            felis vitae tortor pharetra condimentum. Quisque ultricies purus nec
-            mi facilisis, eget fermentum arcu ultricies."
-          </p>
-        </CardContent>
-        <UserInfo>
-          <p>
-            <strong>Name:</strong> John Doe
-          </p>
-          <p>
-            <strong>Email:</strong> johndoe@example.com
+            <strong>Email:</strong> rupeshraut@gmail.com
           </p>
         </UserInfo>
       </Card>

@@ -28,6 +28,7 @@ import Springform from "./components/Sprint_Form/Sprint_form";
 import LoginPage from "./pages/LoginPage";
 import FeedbackCard from "./components/FeedbackCard";
 import Analytics from "./pages/Analytics/Analytics";
+import EmailSend from "./components/EmailSend";
 
 const App = () => {
   const {
@@ -108,8 +109,10 @@ const App = () => {
                 <Route path="/line" element={<Line />} />
                 <Route path="/feedback" element={<Customer />} />
                 <Route path="/customerfeedback" element={<FeedbackCard />} />
-                {/* <Route path="/area" element={<Area />} />
                 <Route path="/analytics" element={<Analytics />} />
+                <Route path="/sendMail" element={<EmailSend />} />
+
+                {/* <Route path="/area" element={<Area />} />
 
                 <Route path="/area" element={<Area />} />
                 <Route path="/bar" element={<Bar />} />
