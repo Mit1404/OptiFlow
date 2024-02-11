@@ -27,7 +27,6 @@ const Sprint = () => {
         dataSource={kanbanData}
         cardSettings={{
           showHeader: true,
-          headerField: "",
           contentField: "Summary",
           headerField: "Title",
           tagsField: "Assignee",
