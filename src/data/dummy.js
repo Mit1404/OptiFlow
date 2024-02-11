@@ -188,7 +188,7 @@ export const kanbanData = [
     Priority: "Low",
     Tags: "Analyze,Customer",
     Estimate: 3.5,
-    Assignee: "Nancy Davloio",
+    Assignee: "Nancy,Davloio",
     RankId: 1,
     Color: "#02897B",
     ClassName: "e-story, e-low, e-nancy-davloio",
@@ -3459,8 +3459,6 @@ export const stackedPrimaryYAxis = {
   minorTickLines: { width: 0 },
   labelFormat: "{value}",
 };
-
-
 
 export const financialChartData = [
   {

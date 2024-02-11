@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 
 const Sprint = () => {
   const navigate = useNavigate();
-  
+
   const addSprint = () => {
     navigate("/sprintform");
   };
@@ -19,16 +19,18 @@ const Sprint = () => {
     <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-3xl">
       <div className="flex flex-row justify-between">
         <Header category="App-name" title="Sprint" />
-        <IoAddSharp size="50px" onClick={addSprint} />
+        <IoAddSharp size="50px" onClick={addSprint} cursor="pointer" />
       </div>
       <KanbanComponent
         id="kanban"
         keyField="Status"
         dataSource={kanbanData}
         cardSettings={{
+          showHeader: true,
+          headerField: "",
           contentField: "Summary",
-          headerField: "Id",
-          tagsField: "Tags",
+          headerField: "Title",
+          tagsField: "Assignee",
           grabberField: "Color",
         }}
       >
