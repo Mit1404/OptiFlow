@@ -117,7 +117,7 @@ const App = () => {
                 <Route path="/sprintform" element={<Springform />} />
               </Routes>
             </div>
-            <Footer />
+            {/* <Footer /> */}
           </div>
         </div>
       </BrowserRouter>

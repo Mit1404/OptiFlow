@@ -1,15 +1,53 @@
-import React from 'react';
+// PieChartComponent.jsx
+import React from "react";
+import { PieChart, Pie, Tooltip, Legend, Cell } from "recharts";
 
-import { pieChartData } from '../../data/dummy';
-import { ChartsHeader, Pie as PieChart } from '../../components';
+const PieChartComponent = () => {
+  const data = [
+    { name: "Completed", value: 5 },
+    { name: "Incomplete", value: 7 },
+    { name: "Overdue", value: 3 },
+    { name: "Total", value: 15 },
+  ];
 
-const Pie = () => (
-  <div className="m-4 md:m-10 mt-24 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl">
-    <ChartsHeader category="Pie" title="Project Cost Breakdown" />
-    <div className="w-full">
-      <PieChart id="chart-pie" data={pieChartData} legendVisiblity height="full" />
-    </div>
-  </div>
-);
+  // Define gradient stops for the blur effect
+  const gradientStops = [
+    { offset: "0%", stopColor: "rgba(0, 0, 0, 0)" },
+    { offset: "100%", stopColor: "rgba(0, 0, 0, 0.8)" },
+  ];
 
-export default Pie;
+  return (
+    <PieChart width={400} height={400}>
+      <Pie data={data} cx={200} cy={200} outerRadius={150} fill="#8884d8" label>
+        {data.map((entry, index) => (
+          <Cell key={`cell-${index}`} fill={`url(#gradient-${index})`} />
+        ))}
+      </Pie>
+      <Tooltip />
+      <Legend />
+      {/* Define the linear gradient */}
+      <defs>
+        {data.map((entry, index) => (
+          <linearGradient
+            key={`gradient-${index}`}
+            id={`gradient-${index}`}
+            x1="0"
+            y1="0"
+            x2="0"
+            y2="1"
+          >
+            {gradientStops.map((stop, stopIndex) => (
+              <stop
+                key={`stop-${index}-${stopIndex}`}
+                offset={stop.offset}
+                stopColor={stop.stopColor}
+              />
+            ))}
+          </linearGradient>
+        ))}
+      </defs>
+    </PieChart>
+  );
+};
+
+export default PieChartComponent;
