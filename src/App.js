@@ -26,6 +26,7 @@ import Customer from "./components/Customer/Customer";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Springform from "./components/Sprint_Form/Sprint_form";
 import LoginPage from "./pages/LoginPage";
+import FeedbackCard from "./components/FeedbackCard";
 
 const App = () => {
   const {
@@ -63,7 +64,7 @@ const App = () => {
               </button>
             </TooltipComponent>
           </div>
-          
+
           {activeMenu ? (
             <div className="w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white ">
               <Sidebar />
@@ -85,9 +86,8 @@ const App = () => {
             </div>
             <div>
               {themeSettings && <ThemeSettings />}
-              
-              <Routes>
 
+              <Routes>
                 {/* SprintForm  */}
                 <Route path="/sprintform" element={<Springform />} />
                 <Route path="/login" element={<LoginPage />} />
@@ -95,7 +95,7 @@ const App = () => {
                 {/* Projects  */}
                 <Route path="/roadmap" element={<Calendar />} />
                 {/* dashboard  */}
-                <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/" element={<Dashboard />} />
                 {/* pages  */}
                 <Route path="/employees" element={<Employees />} />
 
@@ -106,15 +106,15 @@ const App = () => {
                 {/* charts  */}
                 <Route path="/line" element={<Line />} />
                 <Route path="/feedback" element={<Customer />} />
-
-                <Route path="/area" element={<Area />} />
+                <Route path="/customerfeedback" element={<FeedbackCard />} />
+                {/* <Route path="/area" element={<Area />} />
                 <Route path="/bar" element={<Bar />} />
                 <Route path="/pie" element={<Pie />} />
                 <Route path="/financial" element={<Financial />} />
                 <Route path="/color-mapping" element={<ColorMapping />} />
                 <Route path="/pyramid" element={<Pyramid />} />
                 <Route path="/stacked" element={<Stacked />} />
-                <Route path="/sprintform" element={<Springform />} />
+                <Route path="/sprintform" element={<Springform />} /> */}
               </Routes>
             </div>
             {/* <Footer /> */}

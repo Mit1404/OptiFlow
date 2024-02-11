@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { auth } from "../firebase.config";
+import { NavLink } from "react-router-dom";
 
 const LoginPage = () => {
+  
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -20,6 +22,7 @@ const LoginPage = () => {
   return (
     <div style={{opacity:0.8}}>
       <Container>
+        
         <FormContainer style={{opacity:0.9}}>
           <h2>Login</h2>
           <form onSubmit={handleSubmit}>
@@ -35,7 +38,10 @@ const LoginPage = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <Button type="submit">Login</Button>
+            <Button type="submit" onClick={()=>{
+              // Redirect to dashboard after successful login
+              window.location.href = "/dashboard";
+            }}>Login</Button>
           </form>
         </FormContainer>
       </Container>

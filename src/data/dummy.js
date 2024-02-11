@@ -19,6 +19,7 @@ import {
   MdOutlineDashboardCustomize,
   MdOutlineSupervisorAccount,
 } from "react-icons/md";
+import { MdOutlineFeedback } from "react-icons/md";
 import { RiRoadMapLine } from "react-icons/ri";
 import { TiTick } from "react-icons/ti";
 import avatar from "./avatar.jpg";
@@ -54,6 +55,7 @@ export const links = [
       {
         name: "Dashboard",
         icon: <MdOutlineDashboardCustomize />,
+        url: "",
       },
     ],
   },
@@ -75,6 +77,11 @@ export const links = [
         name: "Analytics",
         icon: <DiGoogleAnalytics />,
         url: "analytics",
+      },
+      {
+        name: "Customer Feedback",
+        icon: <MdOutlineFeedback />,
+        url: "customerfeedback",
       },
     ],
   },
@@ -1359,8 +1366,8 @@ export const customersData = [
   {
     CustomerID: 1005,
 
-    CustomerName: "Michael",
-    CustomerEmail: "michael@gmail.com",
+    CustomerName: "Mit Shah",
+    CustomerEmail: "mitshah@gmail.com",
     ProjectName: "Weekly WP Theme",
     Status: "Cancel",
     CustomerImage: avatar2,

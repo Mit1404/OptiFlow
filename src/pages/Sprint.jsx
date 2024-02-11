@@ -19,7 +19,10 @@ const Sprint = () => {
     <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-3xl">
       <div className="flex flex-row justify-between">
         <Header category="App-name" title="Sprint" />
-        <IoAddSharp size="50px" onClick={addSprint} cursor="pointer" />
+        <div className="flex flex-row justify-c">
+          Add
+          <IoAddSharp size="50px" onClick={addSprint} cursor="pointer" />
+        </div>
       </div>
       <KanbanComponent
         id="kanban"

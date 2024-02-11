@@ -25,28 +25,28 @@ const Springform = () => {
   //   console.log(x);
   // };
 
-  // // This function will be called when the form is submitted
-  // const handleSubmit = async (event) => {
-  //   event.preventDefault();
-  //   // Do something with the form data here
-  //   if (
-  //     taskTitle === "" ||
-  //     taskSummary === "" ||
-  //     taskStatus === "" ||
-  //     priority === ""
-  //   ) {
-  //     alert("Please fill all the fields");
-  //     return; // Return early if form is not valid
-  //   }
-  //   if (priority === "High") {
-  //     setColor("red");
-  //   } else if (priority === "Medium") {
-  //     setColor("blue");
-  //   } else if (priority === "Low") {
-  //     setColor("green");
-  //   }
-  //   await addTask(); // Call addTask function
-  // };
+  // This function will be called when the form is submitted
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    // Do something with the form data here
+    if (
+      taskTitle === "" ||
+      taskSummary === "" ||
+      taskStatus === "" ||
+      priority === ""
+    ) {
+      alert("Please fill all the fields");
+      return; // Return early if form is not valid
+    }
+    if (priority === "High") {
+      setColor("red");
+    } else if (priority === "Medium") {
+      setColor("blue");
+    } else if (priority === "Low") {
+      setColor("green");
+    }
+    await addTask(); // Call addTask function
+  };
   // useEffect(() => {
   //   getKanbanData();
   // },[])
