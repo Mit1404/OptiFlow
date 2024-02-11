@@ -9,6 +9,7 @@ import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 import avatar from "../data/avatar.jpg";
 import { Cart, Chat, Notification, UserProfile } from ".";
 import { useStateContext } from "../contexts/ContextProvider";
+import { NavLink } from "react-router-dom";
 
 const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
   <TooltipComponent content={title} position="BottomCenter">
@@ -101,7 +102,7 @@ const Navbar = () => {
         </TooltipComponent>
 
         {isClicked.cart && <Cart />}
-        {isClicked.chat && <Chat />}
+        {isClicked.chat && <NavLink to="/chat" className="text-black"></NavLink>}
         {isClicked.notification && <Notification />}
         {isClicked.userProfile && <UserProfile />}
       </div>
