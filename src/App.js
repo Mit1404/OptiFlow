@@ -25,6 +25,7 @@ import Customer from "./components/Customer/Customer";
 // import Springform from "./components/Sprint_Form/Sprint_form";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Springform from "./components/Sprint_Form/Sprint_form";
+import LoginPage from "./pages/LoginPage";
 
 const App = () => {
   const {
@@ -62,6 +63,7 @@ const App = () => {
               </button>
             </TooltipComponent>
           </div>
+          
           {activeMenu ? (
             <div className="w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white ">
               <Sidebar />
@@ -83,10 +85,12 @@ const App = () => {
             </div>
             <div>
               {themeSettings && <ThemeSettings />}
-
+              
               <Routes>
+
                 {/* SprintForm  */}
                 <Route path="/sprintform" element={<Springform />} />
+                <Route path="/login" element={<LoginPage />} />
                 {/* dashboard  */}
                 {/* Projects  */}
                 <Route path="/roadmap" element={<Calendar />} />
